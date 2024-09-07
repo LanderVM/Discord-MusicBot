@@ -1,0 +1,6 @@
+set LAVALINK_SERVER_PORT=2333
+set LAVALINK_SERVER_ADDRESS=0.0.0.0
+set LAVALINK_SERVER_PASSWORD=youshallnotpass
+
+java -jar Lavalink.jar
+PAUSE
