@@ -1,6 +1,9 @@
-set LAVALINK_SERVER_PORT=2333
-set LAVALINK_SERVER_ADDRESS=0.0.0.0
-set LAVALINK_SERVER_PASSWORD=youshallnotpass
+@echo off
 
+REM Load environment variables from .env file
+for /f "tokens=1,2 delims==" %%a in ('type .env') do set %%a=%%b
+
+REM Start Lavalink with loaded environment variables
 java -jar Lavalink.jar
+
 PAUSE

@@ -27,12 +27,12 @@ module.exports = {
 	nodes: [
 		{
 			identifier: "Main Node", //- Used for indentifier in stats commands.
-			host: process.env.LAVALINK_NODE_HOST || "127.0.0.1", //- The host name or IP of the lavalink server.
-			port: parseInt(process.env.LAVALINK_NODE_PORT) || 2333, // The port that lavalink is listening to. This must be a number!
-			password: process.env.LAVALINK_NODE_PASSWORD || "", //- The password of the lavalink server.
+			host: process.env.LAVALINK_HOST || "127.0.0.1", //- The host name or IP of the lavalink server.
+			port: parseInt(process.env.LAVALINK_PORT) || 2333, // The port that lavalink is listening to. This must be a number!
+			password: process.env.LAVALINK_PASSWORD || "", //- The password of the lavalink server.
 			retryAmount: 200, //- The amount of times to retry connecting to the node if connection got dropped.
 			retryDelay: 100, //- Delay between reconnect attempts if connection is lost.
-			secure: process.env.LAVALINK_NODE_SECURE === "true", //- Can be either true or false. Only use true if ssl is enabled!
+			secure: process.env.LAVALINK_SECURE === "true", //- Can be either true or false. Only use true if ssl is enabled!
 		},
 		/*{ //Solved in docker-compose.yml
 			identifier: "DockerNode", // log id string

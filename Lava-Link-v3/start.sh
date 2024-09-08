@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Set environment variables
-export LAVALINK_SERVER_PORT=2333
-export LAVALINK_SERVER_ADDRESS=0.0.0.0
-export LAVALINK_SERVER_PASSWORD=youshallnotpass
+# Load environment variables from .env file
+if [ -f .env ]; then
+  export $(grep -v '^#' .env | xargs)
+fi
 
 # Run Lavalink server
 java -jar Lavalink.jar

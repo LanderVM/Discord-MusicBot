@@ -1,6 +1,6 @@
 server: # REST and WS server https://github.com/lavalink-devs/Lavalink/blob/master/LavalinkServer/application.yml.example
-  port: ${LAVALINK_SERVER_PORT:2333}
-  address: ${LAVALINK_SERVER_ADDRESS:0.0.0.0}
+  port: ${LAVALINK_PORT:2333}
+  address: ${LAVALINK_ADDRESS:0.0.0.0}
   http2:
     enabled: false
 
@@ -11,7 +11,7 @@ lavalink:
   pluginsDir: ./plugins
 
   server:
-    password: ${LAVALINK_SERVER_PASSWORD:"youshallnotpass"}
+    password: ${LAVALINK_PASSWORD:"youshallnotpass"}
     sources:
       # The default Youtube source is now deprecated and won't receive further updates. Please use https://github.com/lavalink-devs/youtube-source#plugin instead.
       youtube: false

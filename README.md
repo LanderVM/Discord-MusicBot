@@ -8,6 +8,30 @@ I created this tutorial because the original one wasn't very straightforward for
 
 ---
 
+## 🚀Very Quick Setup (Windows only)
+
+**Note:** Use the "⚡Quick Setup" below if you plan to run the bot 24/7 or want to want to set up correctly.
+
+Download [⬇️Download this project](https://github.com/LanderVM/Discord-MusicBot/archive/refs/heads/v5.zip), right click it and unzip it. Then [⬇️ Download Docker Desktop](https://www.docker.com/products/docker-desktop/) and start the Docker Desktop program you just installed.
+When docker Desktop is running, open the unzipped file you just downloaded and run the `QuickStart.bat` file. This will do almost everything for you.
+
+The project will ask you for some discord information.
+You can find your `Discord Bot Token`:
+
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications).
+2. Click on `New Application`.
+3. Name your application, agree to the TOS and Developer Policy, then click `Create`.
+4. Navigate to the `Bot` tab and click `Reset Token`, then `Yes, do it!`.
+5. Click `Copy` to copy the token and keep it safe. **Do not share this token with anyone!**
+
+You can find your `Discord Client ID`: Open the [Discord Developer Portal](https://discord.com/developers/applications), click on OAuth2 on the left side of the website, and copy your Client ID.
+Then for your `Discord Client Secret`:
+on the same webpage, click `Reset Client Secret`, and paste it into the `DISCORD_CLIENT_SECRET` field.
+
+---
+
+## ⚡Quick Setup
+
 ### 🚧 | Prerequisites
 
 - [Node.js v20 (LTS)](https://nodejs.org/en/download/prebuilt-installer)
@@ -15,7 +39,7 @@ I created this tutorial because the original one wasn't very straightforward for
 
 ### 1. Download/Clone the Project
 
-- Download or clone this project to your local machine.
+- [⬇️Download](https://github.com/LanderVM/Discord-MusicBot/archive/refs/heads/v5.zip) or clone this project to your machine.
 
 ### 2. Create a Bot in the Discord Developer Portal
 
@@ -39,18 +63,20 @@ I created this tutorial because the original one wasn't very straightforward for
 ### 4. Start Lavalink
 
 1. Navigate to the `Lavalink-v3` folder in your project.
-2. **For Windows:**
-   - Run `start.bat` to start Lavalink.
-   - **(Optional)** If you changed the optional values like `LAVALINK_NODE_PORT` or `LAVALINK_NODE_PASSWORD` in the `.env` file, right-click `start.bat`, edit it, and update these values. Then, save and rerun the file.
-3. **For macOS/Linux:**
-   - Open a terminal in the `Lavalink-v3` folder.
-   - Run:
-     ```bash
-     chmod +x start.sh
-     ```
-     ```bash
-     ./start.sh
-     ```
+
+- **For Windows:**
+  - Run `start.bat` to start Lavalink.
+  - **(Optional)** If you changed the optional values like `LAVALINK_NODE_PORT` or `LAVALINK_NODE_PASSWORD` in the `.env` file. Make a copy of the .env.exmaple file, rename it to .env file and edit it. Update the values and rerun the `start.bat` file.
+- **For macOS/Linux:**
+  - Open a terminal in the `Lavalink-v3` folder.
+  - Run:
+    ```bash
+    chmod +x start.sh
+    ```
+    ```bash
+    ./start.sh
+    ```
+  - **(Optional)** If you changed the optional values like `LAVALINK_NODE_PORT` or `LAVALINK_NODE_PASSWORD` in the `.env` file. Make a copy of the .env.exmaple file, rename it to .env file and edit it. Update the values and rerun the `start.sh` file.
 
 ### 5. Invite the Bot to Your Server
 
@@ -94,7 +120,8 @@ I created this tutorial because the original one wasn't very straightforward for
 
 If you want to run the bot in a Docker container:
 
-1. Ensure all optional settings are updated in the `config.js` file.
+0. Make sure to also create the .env file and fill it in with the correct values. (See above step 2 & 3)
+1. Ensure all optional settings are updated in the `Discord-MusicBot-5/config.js` file.
 2. Go into the `Discord-MusicBot-5` folder and build and start both the bot and Lavalink using this command:
 
    ```sh
