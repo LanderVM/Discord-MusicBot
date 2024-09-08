@@ -10,9 +10,9 @@ I created this tutorial because the original one wasn't very straightforward for
 
 ## 🚀Very Quick Setup (Windows only)
 
-**Note:** Use the "⚡Quick Setup" below if you plan to run the bot 24/7 or want to want to set up correctly.
+**Note:** Use the[⚡Quick Setup](#quick-setup) below if you plan to run the bot 24/7 or want to want to set up correctly.
 
-Download [⬇️Download this project](https://github.com/LanderVM/Discord-MusicBot/archive/refs/heads/v5.zip), right click it and unzip it. Then [⬇️ Download Docker Desktop](https://www.docker.com/products/docker-desktop/) and start the Docker Desktop program you just installed.
+[⬇️Download this project](https://github.com/LanderVM/Discord-MusicBot/archive/refs/heads/v5.zip), right click it and unzip it. Then [⬇️ Download Docker Desktop](https://www.docker.com/products/docker-desktop/) and start Docker Desktop.
 When docker Desktop is running, open the unzipped file you just downloaded and run the `QuickStart.bat` file. This will do almost everything for you.
 
 The project will ask you for some discord information.
@@ -24,9 +24,9 @@ You can find your `Discord Bot Token`:
 4. Navigate to the `Bot` tab and click `Reset Token`, then `Yes, do it!`.
 5. Click `Copy` to copy the token and keep it safe. **Do not share this token with anyone!**
 
-You can find your `Discord Client ID`: Open the [Discord Developer Portal](https://discord.com/developers/applications), click on OAuth2 on the left side of the website, and copy your Client ID.
+You can find your `Discord Client ID`: Open the [Discord Developer Portal](https://discord.com/developers/applications), click on `OAuth2` on the left side of the website, and copy your Client ID.
 Then for your `Discord Client Secret`:
-on the same webpage, click `Reset Client Secret`, and paste it into the `DISCORD_CLIENT_SECRET` field.
+on the same webpage, click `Reset Client Secret` and copy it.
 
 ---
 

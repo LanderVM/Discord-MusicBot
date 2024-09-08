@@ -13,7 +13,7 @@ if not exist %envFile% (
 )
 
 :: Step 2: Ask for user input and write to .env file
-echo Follow the github guide if you dont know where to find these values: https://github.com/LanderVM/Discord-MusicBot?tab=readme-ov-file#--very-quick-setup
+echo Follow the github guide if you dont know where to find these values: https://github.com/LanderVM/Discord-MusicBot?tab=readme-ov-file#very-quick-setup-windows-only
 set /p DISCORD_BOT_TOKEN="Enter your Discord Bot Token: "
 set /p DISCORD_CLIENT_ID="Enter your Discord Client ID: "
 set /p DISCORD_CLIENT_SECRET="Enter your Discord Client Secret: "
