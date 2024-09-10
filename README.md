@@ -154,9 +154,8 @@ If you have major coding issues with this bot, please join and ask for help.
 
 ## 🌟 | Made with
 
-- [Discord.js](https://discord.js.org/)
-- [Lavalink](https://github.com/freyacodes/Lavalink) with erela.js
-- [Express](https://expressjs.com/)
-- [Next JS](https://nextjs.org/)
-- [Next UI](https://nextui.org)
-- [Material UI Icons](https://mui.com/material-ui/material-icons/)
+## 📦 | Includes
+
+- **Discord-MusicBot v4.1.2**: [View Release](https://github.com/SudhanPlayz/Discord-MusicBot/releases/tag/v4.1.2)
+- **Lavalink v3.7.12**: [View Release](https://github.com/lavalink-devs/Lavalink/releases/tag/3.7.12)
+- **YouTube Source v1.7.2**: [View Release](https://github.com/lavalink-devs/youtube-source/releases/tag/1.7.2)
