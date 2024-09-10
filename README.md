@@ -152,8 +152,6 @@ This guide provides a basic setup for your Discord music bot. If you encounter a
 
 If you have major coding issues with this bot, please join and ask for help.
 
-## 🌟 | Made with
-
 ## 📦 | Includes
 
 - **Discord-MusicBot v4.1.2**: [View Release](https://github.com/SudhanPlayz/Discord-MusicBot/releases/tag/v4.1.2)
