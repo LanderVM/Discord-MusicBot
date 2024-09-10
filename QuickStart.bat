@@ -1,9 +1,9 @@
 @echo off
 title QuickStart for Discord Music Bot
 
-:: Step 1: Create a .env file in Discord-MusicBot-5 folder
+:: Step 1: Create a .env file in Discord-MusicBot-v4 folder
 setlocal
-set envFile=Discord-MusicBot-5\.env
+set envFile=Discord-MusicBot-v4\.env
 
 if not exist %envFile% (
     echo Creating .env file...
@@ -13,7 +13,7 @@ if not exist %envFile% (
 )
 
 :: Step 2: Ask for user input and write to .env file
-echo Follow the github guide if you dont know where to find these values: https://github.com/LanderVM/Discord-MusicBot?tab=readme-ov-file#very-quick-setup-windows-only
+echo Follow the github guide if you dont know where to find the following values: https://github.com/LanderVM/Discord-MusicBot?tab=readme-ov-file#very-quick-setup-windows-only
 set /p DISCORD_BOT_TOKEN="Enter your Discord Bot Token: "
 set /p DISCORD_CLIENT_ID="Enter your Discord Client ID: "
 set /p DISCORD_CLIENT_SECRET="Enter your Discord Client Secret: "
@@ -32,7 +32,11 @@ if "%ERRORLEVEL%"=="1" (
 
 :: Step 4: Run docker-compose
 
-cd Discord-MusicBot-5
+cd Discord-MusicBot-v4
 docker-compose up -d --build
+
+:: Step 5: Invite
+
+echo Invite the music bot to your discord server using the following url (paste this in a webbrowser): https://discord.com/oauth2/authorize?client_id=%DISCORD_CLIENT_ID%^&scope=bot^&permissions=277083450689
 
 pause
