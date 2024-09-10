@@ -1,34 +1,60 @@
 @echo off
 title QuickStart for Discord Music Bot
 
-:: Step 1: Create a .env file in Discord-MusicBot-v4 folder
-setlocal
+:: Enable delayed expansion to handle dynamic variables properly
+setlocal enabledelayedexpansion
+
+set envExampleFile=Discord-MusicBot-v4\.env.example
 set envFile=Discord-MusicBot-v4\.env
 
+:: Step 1: Copy .env.example to .env if .env doesn't already exist
 if not exist %envFile% (
-    echo Creating .env file...
-    echo. > %envFile%
+    echo Copying .env.example to .env excluding Discord values...
+    (
+        for /f "usebackq tokens=1,* delims==" %%i in (`type %envExampleFile%`) do (
+            if /i "%%i" neq "DISCORD_BOT_TOKEN" if /i "%%i" neq "DISCORD_CLIENT_ID" if /i "%%i" neq "DISCORD_CLIENT_SECRET" (
+                echo %%i=%%j
+            )
+        )
+    ) > %envFile%
 ) else (
     echo .env file already exists.
 )
 
-:: Step 2: Check if the Discord values are already present in the .env file
-findstr /C:"DISCORD_BOT_TOKEN=" %envFile% >nul 2>&1
-if %errorlevel% neq 0 (
+:: Step 2: Ensure Discord values are set in the .env file
+set "foundToken=false"
+set "foundClientId=false"
+set "foundClientSecret=false"
+
+for /f "usebackq tokens=1,* delims==" %%i in (%envFile%) do (
+    if /i "%%i"=="DISCORD_BOT_TOKEN" (
+        set "foundToken=true"
+        set "DISCORD_BOT_TOKEN=%%j"
+    )
+    if /i "%%i"=="DISCORD_CLIENT_ID" (
+        set "foundClientId=true"
+        set "DISCORD_CLIENT_ID=%%j"
+    )
+    if /i "%%i"=="DISCORD_CLIENT_SECRET" (
+        set "foundClientSecret=true"
+        set "DISCORD_CLIENT_SECRET=%%j"
+    )
+)
+
+:: Prompt for missing values and directly append to the .env file if needed
+if not %foundToken%==true (
     set /p DISCORD_BOT_TOKEN="Enter your Discord Bot Token: "
-    echo DISCORD_BOT_TOKEN=%DISCORD_BOT_TOKEN% >> %envFile%
+    echo DISCORD_BOT_TOKEN=!DISCORD_BOT_TOKEN! >> %envFile%
 )
 
-findstr /C:"DISCORD_CLIENT_ID=" %envFile% >nul 2>&1
-if %errorlevel% neq 0 (
+if not %foundClientId%==true (
     set /p DISCORD_CLIENT_ID="Enter your Discord Client ID: "
-    echo DISCORD_CLIENT_ID=%DISCORD_CLIENT_ID% >> %envFile%
+    echo DISCORD_CLIENT_ID=!DISCORD_CLIENT_ID! >> %envFile%
 )
 
-findstr /C:"DISCORD_CLIENT_SECRET=" %envFile% >nul 2>&1
-if %errorlevel% neq 0 (
+if not %foundClientSecret%==true (
     set /p DISCORD_CLIENT_SECRET="Enter your Discord Client Secret: "
-    echo DISCORD_CLIENT_SECRET=%DISCORD_CLIENT_SECRET% >> %envFile%
+    echo DISCORD_CLIENT_SECRET=!DISCORD_CLIENT_SECRET! >> %envFile%
 )
 
 :: Step 3: Check if Docker Desktop is running
@@ -46,7 +72,7 @@ docker-compose up -d --build
 :: Step 5: Bot invite
 echo //////// BOT INVITE ////////
 echo Invite the music bot to your Discord server using the following URL (paste this in a web browser): 
-echo https://discord.com/oauth2/authorize?client_id=%DISCORD_CLIENT_ID%^&scope=bot^&permissions=277083450689
+echo https://discord.com/oauth2/authorize?client_id=!DISCORD_CLIENT_ID!^&scope=bot^&permissions=277083450689
 echo ///////////////////////////
 
 pause
