@@ -33,6 +33,8 @@ The project will ask you for some Discord information.
 - **Discord Client Secret:**
   - On the same webpage, click **Reset Client Secret** and copy it.
 
+If you gave in incorrect information, open the `Discord-MusicBot-v4` folder and delete the `.env` file.
+
 ---
 
 ## ⚡ Quick Setup
