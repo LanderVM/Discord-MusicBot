@@ -65,7 +65,7 @@ If you gave in incorrect information, open the `Discord-MusicBot-v4` folder and 
 5. **Add Client Secret:** Go back to the Developer Portal, click **Reset Client Secret**, and paste it into the `DISCORD_CLIENT_SECRET` field.
 6. _(Optional)_ **Additional Settings:**
    - Update the `DISCORD_ADMIN_ID` field with your Discord ID for access to additional commands. [Learn how to find your Discord ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID).
-   - Adjust other values, such as `LAVALIN_PORT` or `LAVALINK_PASSWORD`, as needed.
+   - Adjust other values, such as `LAVALINK_PORT` or `LAVALINK_PASSWORD`, as needed.
 
 #### 4. Start Lavalink
 
