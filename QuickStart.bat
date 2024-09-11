@@ -11,7 +11,7 @@ set envFile=Discord-MusicBot-v4\.env
 if not exist %envFile% (
     echo Copying .env.example to .env excluding Discord values...
     (
-        for /f "usebackq tokens=1,* delims==" %%i in (`type %envExampleFile%`) do (
+        for /f "usebackq tokens=1,* delims==" %%i in (type %envExampleFile%) do (
             if /i "%%i" neq "DISCORD_BOT_TOKEN" if /i "%%i" neq "DISCORD_CLIENT_ID" if /i "%%i" neq "DISCORD_CLIENT_SECRET" (
                 echo %%i=%%j
             )
@@ -41,20 +41,29 @@ for /f "usebackq tokens=1,* delims==" %%i in (%envFile%) do (
     )
 )
 
+:: Function to trim trailing spaces
+set "trim="
+for /f "tokens=* delims= " %%a in ("%DISCORD_BOT_TOKEN%") do set "DISCORD_BOT_TOKEN=%%a"
+for /f "tokens=* delims= " %%a in ("%DISCORD_CLIENT_ID%") do set "DISCORD_CLIENT_ID=%%a"
+for /f "tokens=* delims= " %%a in ("%DISCORD_CLIENT_SECRET%") do set "DISCORD_CLIENT_SECRET=%%a"
+
 :: Prompt for missing values and directly append to the .env file if needed
 if not %foundToken%==true (
     set /p DISCORD_BOT_TOKEN="Enter your Discord Bot Token: "
-    echo DISCORD_BOT_TOKEN=!DISCORD_BOT_TOKEN! >> %envFile%
+    for /f "tokens=* delims= " %%a in ("!DISCORD_BOT_TOKEN!") do set "DISCORD_BOT_TOKEN=%%a"
+    echo DISCORD_BOT_TOKEN=!DISCORD_BOT_TOKEN!>> %envFile%
 )
 
 if not %foundClientId%==true (
     set /p DISCORD_CLIENT_ID="Enter your Discord Client ID: "
-    echo DISCORD_CLIENT_ID=!DISCORD_CLIENT_ID! >> %envFile%
+    for /f "tokens=* delims= " %%a in ("!DISCORD_CLIENT_ID!") do set "DISCORD_CLIENT_ID=%%a"
+    echo DISCORD_CLIENT_ID=!DISCORD_CLIENT_ID!>> %envFile%
 )
 
 if not %foundClientSecret%==true (
     set /p DISCORD_CLIENT_SECRET="Enter your Discord Client Secret: "
-    echo DISCORD_CLIENT_SECRET=!DISCORD_CLIENT_SECRET! >> %envFile%
+    for /f "tokens=* delims= " %%a in ("!DISCORD_CLIENT_SECRET!") do set "DISCORD_CLIENT_SECRET=%%a"
+    echo DISCORD_CLIENT_SECRET=!DISCORD_CLIENT_SECRET!>> %envFile%
 )
 
 :: Step 3: Check if Docker Desktop is running
