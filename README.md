@@ -10,7 +10,7 @@ I created this tutorial because the original one wasn't very straightforward for
 
 ## 🚀 Very Quick Setup (Windows Only)
 
-> **Note:** Use the [⚡Quick Setup](#quick-setup) below if you plan to run the bot 24/7 or want to set it up correctly.
+> **Note:** Use the [⚡Quick Setup](#-quick-setup) below if you plan to run the bot 24/7 or want to set it up correctly.
 
 1. [⬇️ Download this project](https://github.com/LanderVM/Discord-MusicBot/archive/refs/heads/v5.zip), right-click it and unzip it.
 2. Then [⬇️ Download Docker Desktop](https://www.docker.com/products/docker-desktop/) and start Docker Desktop.
