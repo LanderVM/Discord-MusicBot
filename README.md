@@ -95,7 +95,7 @@ I created this tutorial because the original one wasn't very straightforward for
 
 ---
 
-### 🐳 Running with Docker
+## 🐳 Running with Docker
 
 If you want to run the bot in a Docker container:
 
@@ -111,13 +111,13 @@ If you want to run the bot in a Docker container:
 
 ---
 
-### 🔧 Troubleshooting Common Issues
+## 🔧 Troubleshooting Common Issues
 
 - **Bot Not Appearing Online:** Check if the bot token is correct and if the bot has been invited to the server.
 - **Lavalink Not Starting:** Ensure Node.js 20 & Java 21 are installed.
 - **Commands Not Working:** Verify that slash commands were deployed successfully and that the bot has sufficient permissions.
 
-### **Conclusion**
+## **Conclusion**
 
 This guide provides a basic setup for your Discord music bot. If you encounter any issues or if something is unclear, feel free to reach out for further assistance. This guide is created for Windows, but the steps may vary slightly on other operating systems. For non-Windows users, refer to the appropriate commands in Step 4.
 
