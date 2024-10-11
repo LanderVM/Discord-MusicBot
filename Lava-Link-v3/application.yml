@@ -6,8 +6,10 @@ server: # REST and WS server https://github.com/lavalink-devs/Lavalink/blob/mast
 
 lavalink:
   plugins:
-    - dependency: dev.lavalink.youtube:youtube-plugin:1.7.2
+    - dependency: dev.lavalink.youtube:youtube-plugin:1.8.3
       repository: "https://maven.lavalink.dev/releases"
+    - dependency: "com.github.TopiSenpai.LavaSrc:lavasrc-plugin:3.2.10"
+      repository: "https://maven.topi.wtf/releases"
   pluginsDir: ./plugins
 
   server:
