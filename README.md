@@ -8,35 +8,6 @@ I created this tutorial because the original one wasn't very straightforward for
 
 ---
 
-## 🚀 Very Quick Setup (Windows Only)
-
-> **Note:** Use the [⚡Quick Setup](#-quick-setup) below if you plan to run the bot 24/7 or want to set it up correctly.
-
-1. [⬇️ Download this project](https://github.com/LanderVM/Discord-MusicBot/archive/refs/heads/v5.zip), right-click it and unzip it.
-2. Then [⬇️ Download Docker Desktop](https://www.docker.com/products/docker-desktop/) and start Docker Desktop.
-3. When Docker Desktop is running, open the unzipped file you just downloaded and run the `QuickStart.bat` file. This will do almost everything for you.
-
-The project will ask you for some Discord information.
-
-- **Discord Bot Token:**
-
-  1. Go to the [Discord Developer Portal](https://discord.com/developers/applications).
-  2. Click on **New Application**.
-  3. Name your application, agree to the TOS and Developer Policy, then click **Create**.
-  4. Navigate to the **Bot** tab and click **Reset Token**, then **Yes, do it!**.
-  5. Click **Copy** to copy the token and keep it safe. **Do not share this token with anyone!**
-
-- **Discord Client ID:**
-
-  - Again on the Discord Developer Portal webpage, click on **OAuth2** on the left side of the website, and copy your Client ID.
-
-- **Discord Client Secret:**
-  - On the same webpage, click **Reset Client Secret** and copy it.
-
-If you gave in incorrect information, open the `Discord-MusicBot-v5` folder and delete the `.env` file.
-
----
-
 ## ⚡ Quick Setup
 
 ### 🚧 Prerequisites
