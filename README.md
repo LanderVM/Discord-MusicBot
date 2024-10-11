@@ -1,4 +1,4 @@
-<h1 align="center"><img src="./Discord-MusicBot-v4/assets/logo.gif" width="30px"> Discord Music Bot <img src="./Discord-MusicBot-v4/assets/logo.gif" width="30px"></h1>
+<h1 align="center"><img src="./Discord-MusicBot-v5/assets/logo.gif" width="30px"> Discord Music Bot <img src="./Discord-MusicBot-v5/assets/logo.gif" width="30px"></h1>
 
 ## 📝 | Tutorial: Setting Up Your Discord Music Bot
 
@@ -33,7 +33,7 @@ The project will ask you for some Discord information.
 - **Discord Client Secret:**
   - On the same webpage, click **Reset Client Secret** and copy it.
 
-If you gave in incorrect information, open the `Discord-MusicBot-v4` folder and delete the `.env` file.
+If you gave in incorrect information, open the `Discord-MusicBot-v5` folder and delete the `.env` file.
 
 ---
 
@@ -58,7 +58,7 @@ If you gave in incorrect information, open the `Discord-MusicBot-v4` folder and 
 
 #### 3. Set Up Environment Variables
 
-1. Open the `Discord-MusicBot-v4` folder and create a copy of the `.env.example` file, then rename it to `.env`.
+1. Open the `Discord-MusicBot-v5` folder and create a copy of the `.env.example` file, then rename it to `.env`.
 2. Open the `.env` file in any text editor.
 3. **Add Bot Token:** Paste the token from the Discord Developer Portal into the `DISCORD_BOT_TOKEN` field.
 4. **Add Client ID:** Go back to the Developer Portal, click on **OAuth2** on the left side, and copy your `Client ID`. Paste it into the `DISCORD_CLIENT_ID` field.
@@ -95,7 +95,7 @@ If you gave in incorrect information, open the `Discord-MusicBot-v4` folder and 
 
 #### 6. Get the Bot Online
 
-1. Navigate back to the `Discord-MusicBot-v4` folder.
+1. Navigate back to the `Discord-MusicBot-v5` folder.
 2. Open a terminal or command prompt.
 
    - Install Dependencies:
@@ -120,7 +120,7 @@ If you gave in incorrect information, open the `Discord-MusicBot-v4` folder and 
 
 #### 7. Customize Bot Settings *(Optional)*
 
-- To change additional settings, such as the bot's name or other configurations, edit the `config.js` file in the `Discord-MusicBot-v4` directory.
+- To change additional settings, such as the bot's name or other configurations, edit the `config.js` file in the `Discord-MusicBot-v5` directory.
 
 ---
 
@@ -129,8 +129,8 @@ If you gave in incorrect information, open the `Discord-MusicBot-v4` folder and 
 If you want to run the bot in a Docker container:
 
 0. Make sure to create the `.env` file and fill it in with the correct values. (See steps 2 & 3 above)
-1. Ensure all optional settings are updated in the `Discord-MusicBot-v4/config.js` file.
-2. Go into the `Discord-MusicBot-v4` folder and build and start both the bot and Lavalink using this command:
+1. Ensure all optional settings are updated in the `Discord-MusicBot-v5/config.js` file.
+2. Go into the `Discord-MusicBot-v5` folder and build and start both the bot and Lavalink using this command:
 
    ```sh
    docker-compose up -d --build
@@ -154,6 +154,6 @@ If you have major coding issues with this bot, please join and ask for help.
 
 ## 📦 | Includes
 
-- **Discord-MusicBot v4.1.2**: [View Release](https://github.com/SudhanPlayz/Discord-MusicBot/releases/tag/v4.1.2)
+- **Discord-MusicBot v5**: [View Release](https://github.com/SudhanPlayz/Discord-MusicBot)
 - **Lavalink v3.7.12**: [View Release](https://github.com/lavalink-devs/Lavalink/releases/tag/3.7.12)
 - **YouTube Source v1.7.2**: [View Release](https://github.com/lavalink-devs/youtube-source/releases/tag/1.7.2)

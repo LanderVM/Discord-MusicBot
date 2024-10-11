@@ -4,8 +4,8 @@ title QuickStart for Discord Music Bot
 :: Enable delayed expansion to handle dynamic variables properly
 setlocal enabledelayedexpansion
 
-set envExampleFile=Discord-MusicBot-v4\.env.example
-set envFile=Discord-MusicBot-v4\.env
+set envExampleFile=Discord-MusicBot-v5\.env.example
+set envFile=Discord-MusicBot-v5\.env
 
 :: Step 1: Copy .env.example to .env if .env doesn't already exist
 if not exist %envFile% (
@@ -75,7 +75,7 @@ if "%ERRORLEVEL%"=="1" (
 )
 
 :: Step 4: Run docker-compose
-cd Discord-MusicBot-v4
+cd Discord-MusicBot-v5
 docker-compose up -d --build
 
 :: Step 5: Bot invite
