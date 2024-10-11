@@ -45,7 +45,7 @@ I created this tutorial because the original one wasn't very straightforward for
 - **For Windows:**
 
   - Run `start.bat` to start Lavalink.
-  - _(Optional)_ If you changed the optional values like `LAVALINK_PORT` or `LAVALINK_PASSWORD` in the `.env` file, make sure to update them and rerun the `start.bat` file.
+  - _(Optional)_ If you changed the optional values in Discord-MusicBot-v5 like `LAVALINK_PORT` or `LAVALINK_PASSWORD` in the `.env` file. Make in the `Lavalink-v3` folder a copy of the `.env.exmaple` file, rename it to `.env` file and edit it. Update the values and rerun the `start.bat` file.
 
 - **For macOS/Linux:**
   - Open a terminal in the `Lavalink-v3` folder.
@@ -56,7 +56,7 @@ I created this tutorial because the original one wasn't very straightforward for
     ```bash
     ./start.sh
     ```
-  - _(Optional)_ If you changed the optional values like `LAVALINK_PORT` or `LAVALINK_PASSWORD` in the `.env` file. Make a copy of the `.env.exmaple` file, rename it to `.env` file and edit it. Update the values and rerun the `start.bat` file.
+  - _(Optional)_ If you changed the optional values in Discord-MusicBot-v5 like `LAVALINK_PORT` or `LAVALINK_PASSWORD` in the `.env` file. Make in the `Lavalink-v3` folder a copy of the `.env.exmaple` file, rename it to `.env` file and edit it. Update the values and rerun the `./start.sh` command.
 
 #### 5. Invite the Bot to Your Server
 
@@ -89,7 +89,7 @@ I created this tutorial because the original one wasn't very straightforward for
 3. If everything is set up correctly, you should see the message `Successfully logged in as ...`.
 4. Check if the bot is online by going to your server and verifying its online. Connect to a voice channel and use the `/play (your specified song)` command in a (public) text channel to test if the bot plays the song.
 
-#### 7. Customize Bot Settings *(Optional)*
+#### 7. Customize Bot Settings _(Optional)_
 
 - To change additional settings, such as the bot's name or other configurations, edit the `config.js` file in the `Discord-MusicBot-v5` directory.
 
@@ -109,10 +109,12 @@ If you want to run the bot in a Docker container:
 
    _(Optional)_ Check the `docker-compose.yml` and `docker/application.yml` files if you changed any optional settings in the `.env` file.
 
+---
+
 ### 🔧 Troubleshooting Common Issues
 
 - **Bot Not Appearing Online:** Check if the bot token is correct and if the bot has been invited to the server.
-- **Lavalink Not Starting:** Ensure Node.js 20 & Java 21 are installed and properly configured.
+- **Lavalink Not Starting:** Ensure Node.js 20 & Java 21 are installed.
 - **Commands Not Working:** Verify that slash commands were deployed successfully and that the bot has sufficient permissions.
 
 ### **Conclusion**

@@ -22,8 +22,7 @@ module.exports = {
 	debug: true, //- Debug mode
 	cookieSecret: process.env.COOKIE_SECRET || "", //- Cookie Secret
 	website: "http://localhost:4200", //- without the / at the end
-	// You need a lavalink server for this bot to work!!!!
-	// Lavalink server; public lavalink -> https://lavalink-list.darrennathanael.com/; create one yourself -> https://darrennathanael.com/post/how-to-lavalink
+	// If you dont want to host lavalink yourself check out public lavalink servers: https://lavalink-list.darrennathanael.com/;
 	nodes: [
 		{
 			identifier: "Main Node", //- Used for indentifier in stats commands.
